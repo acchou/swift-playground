@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
+    <pages>
+        <page name='UI Playground'/>
+        <page name='Function playground'/>
+        <page name='Enum playground'/>
+        <page name='Dictionary playground'/>
+        <page name='Array playground'/>
+        <page name='JSON playground'/>
+        <page name='Closure playground'/>
+        <page name='Optional playground'/>
+        <page name='Generics playground'/>
+        <page name='Stored property playground'/>
+        <page name='Comment playground'/>
+        <page name='Print playground'/>
+        <page name='Date Playground'/>
+        <page name='Struct playground'/>
+    </pages>
+</playground>
