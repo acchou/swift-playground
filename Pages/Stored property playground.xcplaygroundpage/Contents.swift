@@ -15,6 +15,12 @@ var v: Int = 0 {
 v = 1
 v = 42
 
+var array = [0, 1, 2] {
+    didSet {
+        print("array didSet: ", array)
+    }
+}
 
+array.append(42)
 
 //: [Next](@next)

@@ -39,5 +39,24 @@ let eq: (Int, Int) -> Bool = (==)
 eq(5, 6)
 eq(10,10)
 
+// Closure type inference
+
+// Infer argument and return type
+let zero = { return 0 }
+zero()
+
+// Infer return type
+let succ = { (x) in return x+1 }
+succ(42)
+
+let twotimes = { $0 * 2 }
+twotimes(100)
+
+let square = { (x) -> Int in return x * x }
+square(10)
+
+let mult = { (x, y) -> Int in return x * y }
+mult(6, 7)
+
 
 //: [Next](@next)

@@ -15,5 +15,7 @@
         <page name='Print playground'/>
         <page name='Date Playground'/>
         <page name='Struct playground'/>
+        <page name='String playground'/>
+        <page name='Log playground'/>
     </pages>
 </playground>
