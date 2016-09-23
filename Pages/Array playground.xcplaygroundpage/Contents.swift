@@ -43,5 +43,8 @@ emptyList.joinWithSeparator("-")
 emptyList.sort()
 emptyList.underestimateCount()
 
+var d: [Int] = [42, 100, 45]
+d.count
+d.endIndex
 
 //: [Next](@next)

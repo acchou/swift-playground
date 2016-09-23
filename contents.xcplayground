@@ -17,5 +17,7 @@
         <page name='Struct playground'/>
         <page name='String playground'/>
         <page name='Log playground'/>
+        <page name='Let playground'/>
+        <page name='Metatype playground'/>
     </pages>
 </playground>
