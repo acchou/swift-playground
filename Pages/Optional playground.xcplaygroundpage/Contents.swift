@@ -9,12 +9,12 @@ str = "there"
 
 var doubleopt: String?? = "wow"
 doubleopt = "wow wow"
-doubleopt.dynamicType
+type(of: doubleopt)
 
 if let single = doubleopt {
-    single.dynamicType
+    type(of: single)
     if let str = single {
-        str.dynamicType
+        type(of: str)
     }
 }
 
@@ -44,14 +44,14 @@ print(cvar!!)
 
 // Using Optional directly
 var optAddress : String? = "4 Market St, San Francisco, CA"
-var optName = Optional.Some("Andy")
+var optName = Optional.some("Andy")
 
 if let name = optName, let address = optAddress {
     print (name, address)
 }
 
 // Special constructs for optionals
-if let name = optName where name.hasPrefix("A"), let address = optAddress where address.hasPrefix("4") {
+if let name = optName, name.hasPrefix("A"), let address = optAddress, address.hasPrefix("4") {
     print("\"\(name)\" begins with A and \"\(address)'\" begins with 4")
 }
 

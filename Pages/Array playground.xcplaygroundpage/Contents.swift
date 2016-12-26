@@ -10,11 +10,11 @@ for value in a {
 print("\n")
 
 // Inferred types for arrays might be more generic than expected.
-[1, 2, 3].dynamicType
-[1, "2", [3.0]].dynamicType
+type(of: [1, 2, 3])
+type(of: [1, "2", [3.0]])
 
-let b = [1, "2", [3.0]]
-(b[2] as! Array<Float>)[0]
+let b = [1, "2", [3.0]] as [Any]
+(b[2] as! Array<Double>)[0]
 
 
 
@@ -39,9 +39,9 @@ emptyList.contains("c")
 emptyList.count
 emptyList.debugDescription
 emptyList.description
-emptyList.joinWithSeparator("-")
-emptyList.sort()
-emptyList.underestimateCount()
+emptyList.joined(separator: "-")
+emptyList.sorted()
+emptyList.underestimatedCount
 
 var d: [Int] = [42, 100, 45]
 d.count

@@ -4,31 +4,31 @@ import Foundation
 
 // Using enums.
 enum CustomerType {
-    case Suspect, Prospect, Customer, Renewal, Former
+    case suspect, prospect, customer, renewal, former
     
     func description() -> String {
         switch self {
-        case .Suspect: return "Suspect"
-        case .Prospect: return "Prospect"
-        case .Customer: return "Customer"
-        case .Renewal: return "Renewal"
-        case .Former: return "Former"
+        case .suspect: return "Suspect"
+        case .prospect: return "Prospect"
+        case .customer: return "Customer"
+        case .renewal: return "Renewal"
+        case .former: return "Former"
         }
     }
 }
 
-var ctype = CustomerType.Prospect
+var ctype = CustomerType.prospect
 ctype.description()
 
 // Some enums from Obj-C have different conversion to String behavior.
 
 enum qosType: Int {
-    case High
-    case Medium
-    case Low
+    case high
+    case medium
+    case low
 }
 
-let high = qosType.High
+let high = qosType.high
 print(high)
 
 let background = QualityOfService.background
@@ -36,14 +36,14 @@ print(background)
 
 @available(iOS 8.0, *)
 public enum MyQualityOfService : Int {
-    case UserInteractive
-    case UserInitiated
-    case Utility
-    case Background
-    case Default
+    case userInteractive
+    case userInitiated
+    case utility
+    case background
+    case `default`
 }
 
-let bg = MyQualityOfService.Background
+let bg = MyQualityOfService.background
 print(bg)
 
 // Enumerations can have associated values

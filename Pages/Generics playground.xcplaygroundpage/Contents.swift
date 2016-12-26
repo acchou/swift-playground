@@ -6,14 +6,14 @@ class C<T> {
     // Static stored properties not supported in generics yet.
     // static var v: String = "abc"
     
-    func foo(value: T) { }
+    func foo(_ value: T) { }
     
-    convenience init(_ value: T, file: String = __FILE__, line: Int = __LINE__) {
+    convenience init(_ value: T, file: String = #file, line: Int = #line) {
         print("bar")
         self.init(file: file, line: line)
     }
     
-    init(file: String = __FILE__, line: Int = __LINE__) {
+    init(file: String = #file, line: Int = #line) {
         print("baz, \(file):\(line)")
     }
 }
@@ -32,7 +32,7 @@ protocol Reporter {
 
 extension C : Reporter {
     func report() {
-        print(self.dynamicType)
+        print(type(of: self))
     }
 }
 

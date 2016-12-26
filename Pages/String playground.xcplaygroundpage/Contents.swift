@@ -13,12 +13,11 @@ let nhc = nihao.characters
 String(nhc.dropLast())
 
 let nh = nihao.utf8
-visualize(nh)
 Array(nh)
 
 // Code units in UTF-8 are bytes. Code points are 1-6 code units.
-nh.startIndex.distanceTo(nh.endIndex)
-nihao.lengthOfBytesUsingEncoding(NSUTF8StringEncoding)
+nh.distance(from: nh.startIndex, to: nh.endIndex)
+nihao.lengthOfBytes(using: String.Encoding.utf8)
 
 var substrings = Array<String>()
 // Operating on UTF-8 code units chops characters...
@@ -27,7 +26,7 @@ for i in 0...nh.count {
     let ch = String(nh.prefix(i))
     print(ch)
     // XXX This calls an unexpected String constructor...
-    substrings.append(String(nh.prefix(i)))
+    substrings.append(String(describing: nh.prefix(i)))
 }
 print(substrings)
 print(substrings.debugDescription)

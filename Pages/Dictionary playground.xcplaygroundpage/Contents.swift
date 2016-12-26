@@ -21,10 +21,10 @@ if let v = a[32] {
     print("a has index 32")
 }
 
-func foo(i: Int) {
+func foo(_ i: Int) {
     if var x = a[i] {
-        x++
-        x++
+        x += 1
+        x += 1
     } else {
         a[i] = 1
     }
@@ -32,8 +32,8 @@ func foo(i: Int) {
 
 foo(0)
 
-let index = a.indexForKey(0)
-let index2 = a.indexForKey(4)
+let index = a.index(forKey: 0)
+let index2 = a.index(forKey: 4)
 a
 
 class C : Hashable {
@@ -53,9 +53,9 @@ b[0] = C(0)
 b[1] = C(1)
 
 if let c = b[0] {
-    c.x++
-    c.x++
-    c.x++
+    c.x += 1
+    c.x += 1
+    c.x += 1
 } else {
     b[0] = C(42)
 }

@@ -3,7 +3,7 @@
 import Foundation
 
 
-func greet(name: String, day: String) {
+func greet(_ name: String, day: String) {
     print(name, day)
 }
 

@@ -7,12 +7,12 @@ var str2 = "there is another"
 
 let a = [str, str2]
 
-let data = str.dataUsingEncoding(NSUTF8StringEncoding)
-let data2 = str2.dataUsingEncoding(NSUTF8StringEncoding)
+let data = str.data(using: String.Encoding.utf8)
+let data2 = str2.data(using: String.Encoding.utf8)
 
-NSJSONSerialization.isValidJSONObject(a)
-let json = try! NSJSONSerialization.dataWithJSONObject(a, options: NSJSONWritingOptions.PrettyPrinted)
-let objs = try! NSJSONSerialization.JSONObjectWithData(json, options: NSJSONReadingOptions.MutableContainers)
+JSONSerialization.isValidJSONObject(a)
+let json = try! JSONSerialization.data(withJSONObject: a, options: JSONSerialization.WritingOptions.prettyPrinted)
+let objs = try! JSONSerialization.jsonObject(with: json, options: JSONSerialization.ReadingOptions.mutableContainers)
 
 let array = objs as! [String]
 print(array)

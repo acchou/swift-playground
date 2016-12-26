@@ -14,7 +14,7 @@ print(a, b, c, "\n", terminator:"")
 
 
 // Print wrapper behavior
-func myprint(args: Any...) {
+func myprint(_ args: Any...) {
     print(args)
 }
 
