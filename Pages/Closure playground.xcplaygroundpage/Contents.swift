@@ -58,5 +58,29 @@ square(10)
 let mult = { (x, y) -> Int in return x * y }
 mult(6, 7)
 
+// Trailing closures
+
+func trail(closure: () -> Void) {
+    closure()
+}
+
+trail {
+    print("I'm in a trailing closure")
+}
+
+func multi(closure1: (() -> Void) = {}, closure2: (() -> Void) = {}) {
+    print("closure1")
+    closure1()
+    print("closure2")
+    closure2()
+}
+
+multi (closure1: {print("AAA")}) {
+    print("Where am I?")
+}
+
+multi {
+    print("Hmmm... I'm in closure2")
+}
 
 //: [Next](@next)
