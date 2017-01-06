@@ -3,8 +3,15 @@
 import UIKit
 import PlaygroundSupport
 
-let redSquare = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-redSquare.backgroundColor = UIColor.blue
+let alert = UIAlertController(title: "Title", message: "Message", preferredStyle: .actionSheet)
 
-PlaygroundPage.current.liveView = redSquare
+let background = UIViewController()
+background.view = UIView(frame: CGRect(x: 0, y: 0, width: 375, height: 667))
+background.view.backgroundColor = UIColor.white
+
+PlaygroundPage.current.liveView = background
+background.present(alert, animated: true)
+
+alert.dismiss(animated: true)
+
 //: [Next](@next)
