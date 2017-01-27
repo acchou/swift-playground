@@ -59,4 +59,26 @@ let b: Associated = .int(42)
 let c: Associated = .bar(x: 10, y: 12)
 a
 
+enum RxError: Error {
+    case other
+    case timeout
+}
+
+enum OtherError: Error {
+    case someError
+    case intError(Int)
+}
+
+func testEnum(error: Error) {
+    if case RxError.timeout = error {
+        print("timeout")
+    } else {
+        print("not timeout")
+    }
+}
+
+testEnum(error: RxError.timeout)
+testEnum(error: OtherError.someError)
+testEnum(error: OtherError.intError(100))
+
 //: [Next](@next)

@@ -19,5 +19,6 @@
         <page name='Let playground'/>
         <page name='Metatype playground'/>
         <page name='UI Playground'/>
+        <page name='Injection playground'/>
     </pages>
 </playground>
