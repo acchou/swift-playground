@@ -69,5 +69,14 @@ default:
     print("default: \(optAddress)")
 }
 
+// Casting optionals
+let x: Int? = 42
+let y: Any? = x
+let z = y as! Int?
+print(x!)
+print(z!)
+
+let w = x as Any?
+print(w!)
 
 //: [Next](@next)
